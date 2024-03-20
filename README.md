@@ -2,6 +2,9 @@
 
 🚀 This is a simple Golang Command and Control (C2) tool designed to send commands and receive results. It's implemented solely in Golang without any additional features.
 
+## How i build this ?
+You can Find and learn more about this [here](https://doc.void-sec.info)
+
 ## Installation 
 ```git clone https://github.com/unlimiteeed/simple-c2.git```
 
