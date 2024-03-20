@@ -1,4 +1,4 @@
-# Golang C2 Command Sender
+# Golang C2
 
 🚀 This is a simple Golang Command and Control (C2) tool designed to send commands and receive results. It's implemented solely in Golang without any additional features.
 
