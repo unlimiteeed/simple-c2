@@ -12,7 +12,7 @@ import (
 func main() {
 	for {
 
-		conn, err := net.Dial("tcp", "141.11.107.234:2211")
+		conn, err := net.Dial("tcp", "127.0.0.1:8080")
 		if err != nil {
 			fmt.Println("Error connecting:", err)
 			return
