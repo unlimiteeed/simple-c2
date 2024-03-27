@@ -1,37 +1,11 @@
-import platform
-import os
 import socket
-import yaml
-from colorama import Fore
-from time import sleep
+from src import ConfLoad
+from src import Banner
 
-
-with open("config/config.yaml") as configuration:
-    c = yaml.safe_load(configuration)
-    Host = c['Host']['IP-adder']
-    Port = c['Host']['Port']
-
-def Banner():
-    print(Fore.LIGHTBLUE_EX+"""
-
-____   ____    .__    .___
-\   \ /   /___ |__| __| _/
- \   Y   /  _ \|  |/ __ | 
-  \     (  <_> )  / /_/ | 
-   \___/ \____/|__\____ | 
-                       \/ 
-
-""")
-
-def clear():
-    if platform.system() == "Windows":
-        os.system("cls")
-    else:
-        os.system("clear")
+Host,Port = ConfLoad.LoadConfigFile()
+Banner.PrintBanerRc()
 
 def main():
-    clear()
-    Banner()
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as stream:
         stream.bind((Host, Port))
         stream.listen()
