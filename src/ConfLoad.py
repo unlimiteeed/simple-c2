@@ -1,5 +1,9 @@
 import yaml
 
+"""
+Load Yaml File
+"""
+
 def LoadConfigFile():
     with open("config/config.yaml") as configuration:
         c = yaml.safe_load(configuration)
